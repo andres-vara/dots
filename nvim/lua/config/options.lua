@@ -45,7 +45,8 @@ opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 opt.list = true
-opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+opt.listchars = { tab = '│ ', trail = '·', extends = '>', precedes = '<', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 opt.inccommand = 'split'
@@ -60,6 +61,3 @@ opt.hlsearch = true
 
 opt.shiftwidth = 4
 opt.tabstop = 4
-
-opt.list = true
-opt.listchars = { tab = '│ ', trail = '·', extends = '>', precedes = '<', nbsp = '␣' }
