@@ -29,7 +29,7 @@ return { -- Collection of various small independent plugins/modules
       local indentscope = require 'mini.indentscope'
       indentscope.setup {
         symbol = '│',
-        options = { try_as_border = true },
+        -- options = { try_as_border = true },
       }
 
       -- You can configure sections in the statusline by overriding their
