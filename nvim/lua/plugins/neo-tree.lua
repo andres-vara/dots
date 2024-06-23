@@ -8,7 +8,14 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    -- { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    {
+      '\\',
+      function()
+        require('neo-tree.command').execute { toggle = true }
+      end,
+      desc = 'Explorer NeoTree (Root Dir)',
+    },
   },
   opts = {
     filesystem = {
