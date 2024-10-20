@@ -1,13 +1,13 @@
-local map = vim.keymap.set
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 local keymap = vim.keymap.set
 
 keymap({ 'n', 'v' }, '<space>', '<Nop>', { silent = true })
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 keymap('n', '<leader>ml', '<cmd>Lazy<cr>')
 
-map('n', ';', ':', { desc = 'CMD enter command mode' })
-map('i', 'jk', '<ESC>')
+keymap('n', ';', ':', { desc = 'CMD enter command mode' })
+keymap('i', 'jk', '<ESC>')
 keymap({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <cr>')
 keymap('n', '<leader>tt', '<cmd>TransparentToggle<CR>', { desc = '[T]ransparent [T]oggle' })
 
@@ -23,5 +23,5 @@ keymap('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 keymap('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
-keymap('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
-keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+keymap('n', '<leader>er', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
+keymap('n', '<leader>qr', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
